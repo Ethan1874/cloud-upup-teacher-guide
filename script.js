@@ -15,8 +15,8 @@ const mobilePages = [
 ];
 
 const desktopPagesByDevice = {
-  windows: ["download-windows", "desktop-login", "connect", "done"],
-  mac: ["download-mac", "desktop-login", "connect", "done"],
+  windows: ["download-windows", "desktop-login", "buy", "connect", "done"],
+  mac: ["download-mac", "desktop-login", "buy", "connect", "done"],
 };
 
 const pageOrder = [
