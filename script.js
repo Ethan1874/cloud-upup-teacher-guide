@@ -1,17 +1,30 @@
-const pageOrder = [
+const basePages = [
   "start",
   "device",
+];
+
+const mobilePages = [
   "register",
   "login",
   "buy",
   "download-iphone",
   "download-android",
-  "download-windows",
-  "download-mac",
   "mobile-subscribe",
-  "desktop-login",
   "connect",
   "done",
+];
+
+const desktopPagesByDevice = {
+  windows: ["download-windows", "desktop-login", "connect", "done"],
+  mac: ["download-mac", "desktop-login", "connect", "done"],
+};
+
+const pageOrder = [
+  ...basePages,
+  ...mobilePages,
+  "download-windows",
+  "download-mac",
+  "desktop-login",
 ];
 
 const screens = Array.from(document.querySelectorAll(".screen"));
@@ -26,7 +39,11 @@ let selectedDevice = localStorage.getItem("cloud-wizard-device") || "";
 let currentPage = localStorage.getItem("cloud-wizard-page") || "start";
 
 function visiblePages() {
-  return pageOrder.filter((pageId) => {
+  if (desktopPagesByDevice[selectedDevice]) {
+    return [...basePages, ...desktopPagesByDevice[selectedDevice]];
+  }
+
+  return [...basePages, ...mobilePages].filter((pageId) => {
     const screen = document.querySelector(`[data-page="${pageId}"]`);
     const devices = screen.dataset.devices;
     return !devices || devices.split(" ").includes(selectedDevice);
