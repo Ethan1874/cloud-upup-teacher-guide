@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CloudUpUp 老师自助购买与安装翻页引导</title>
+    <title>老师 VPN 自助购买</title>
     <meta
       name="description"
-      content="给老师使用的 CloudUpUp 注册、登录、购买、安装和导入订阅翻页式防错引导。"
+      content="老师 VPN 自助购买、安装和连接入口。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -14,10 +14,10 @@
     <main class="wizard-shell" aria-live="polite">
       <header class="wizard-header">
         <a class="brand" href="#start" aria-label="回到开始">
-          <span class="brand-mark" aria-hidden="true">CU</span>
+          <span class="brand-mark" aria-hidden="true">VPN</span>
           <span>
-            <strong>CloudUpUp 老师引导</strong>
-            <small>一页一步，完成再翻页</small>
+            <strong>老师 VPN 自助购买</strong>
+            <small>购买、安装、连接</small>
           </span>
         </a>
         <div class="progress-summary">
@@ -30,12 +30,9 @@
 
       <section class="screen active" data-page="start" data-title="开始">
         <div class="screen-copy">
-          <p class="eyebrow">防错翻页模式</p>
-          <h1>每一页只做一件事。</h1>
-          <p class="lead">
-            这里会带老师完成注册、登录、购买、下载安装和连接。不要跳着看，
-            每完成一页再点下一页。
-          </p>
+          <p class="eyebrow">欢迎使用</p>
+          <h1>老师 VPN 自助购买</h1>
+          <p class="lead">请准备好常用邮箱和密码，按页面提示完成购买与设备设置。</p>
         </div>
         <div class="action-box">
           <h2>开始前确认</h2>
@@ -55,8 +52,8 @@
       <section class="screen" data-page="device" data-title="选择设备" data-requires-device>
         <div class="screen-copy">
           <p class="eyebrow">第 1 步</p>
-          <h1>老师现在用的是什么设备？</h1>
-          <p class="lead">选错也没关系，可以点上一步回来重选。</p>
+          <h1>请选择正在使用的设备。</h1>
+          <p class="lead">不同设备的安装方式不同，请选择当前要设置的设备。</p>
         </div>
         <div class="device-grid" role="radiogroup" aria-label="设备选择">
           <button class="device-card" type="button" data-device="iphone">
@@ -89,7 +86,7 @@
             打开注册页
           </a>
           <div class="warning">
-            注册完成后回到这个引导页，不要关闭本页面。
+            注册完成后回到本页面继续下一步。
           </div>
           <label class="confirm-line">
             <input type="checkbox" data-required />
@@ -180,7 +177,6 @@
           <a class="button primary" href="https://upup-down.fastgo.live/test/NewCloudUpup-windows-amd64.zip" target="_blank" rel="noreferrer">
             下载 Windows 客户端
           </a>
-          <p class="plain-tip">Cloudflare Pages 不支持托管超过 25 MiB 的安装包，所以这里使用官方客户端下载链接。</p>
           <label class="confirm-line">
             <input type="checkbox" data-required />
             <span>我已经打开 Windows 客户端。</span>
