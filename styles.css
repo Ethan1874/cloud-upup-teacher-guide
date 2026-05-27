@@ -33,6 +33,7 @@ body {
     -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
     "Microsoft YaHei", sans-serif;
   line-height: 1.6;
+  overflow: hidden;
 }
 
 a {
@@ -46,12 +47,14 @@ a:hover {
 
 .wizard-shell {
   width: min(1180px, calc(100% - 28px));
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  gap: 18px;
+  gap: 12px;
   margin: 0 auto;
-  padding: 18px 0;
+  padding: 12px 0;
+  overflow: hidden;
 }
 
 .wizard-header,
@@ -59,8 +62,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 14px;
+  gap: 12px;
+  padding: 12px;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -82,8 +85,8 @@ a:hover {
 
 .brand-mark {
   display: grid;
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   place-items: center;
   color: var(--white);
   background: var(--green);
@@ -111,7 +114,7 @@ a:hover {
 }
 
 .progress-track {
-  height: 12px;
+  height: 10px;
   overflow: hidden;
   background: #e3ecef;
   border-radius: 999px;
@@ -128,13 +131,14 @@ a:hover {
   display: none;
   min-height: 0;
   grid-template-columns: minmax(0, 1fr) minmax(340px, 430px);
-  gap: clamp(22px, 4vw, 56px);
+  gap: clamp(18px, 3vw, 42px);
   align-items: center;
-  padding: clamp(22px, 5vw, 54px);
+  padding: clamp(18px, 3.4vw, 40px);
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+  overflow: auto;
 }
 
 .screen.active {
@@ -144,7 +148,7 @@ a:hover {
 .screen-copy h1 {
   max-width: 760px;
   margin: 0;
-  font-size: clamp(42px, 7vw, 82px);
+  font-size: clamp(36px, 5.2vw, 68px);
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -158,15 +162,15 @@ a:hover {
 
 .lead {
   max-width: 720px;
-  margin: 22px 0 0;
+  margin: 14px 0 0;
   color: #38474f;
-  font-size: clamp(18px, 2.1vw, 23px);
+  font-size: clamp(17px, 1.8vw, 21px);
 }
 
 .action-box,
 .device-grid,
 .help-grid {
-  padding: 24px;
+  padding: 20px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -174,8 +178,8 @@ a:hover {
 }
 
 .action-box h2 {
-  margin: 0 0 14px;
-  font-size: 24px;
+  margin: 0 0 10px;
+  font-size: 22px;
 }
 
 .action-box ul,
@@ -186,15 +190,15 @@ a:hover {
 
 .action-box li + li,
 .test-list li + li {
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 12px 22px;
+  min-height: 44px;
+  padding: 10px 18px;
   border: 2px solid transparent;
   border-radius: 8px;
   font: inherit;
@@ -242,35 +246,35 @@ a:hover {
 .confirm-line {
   display: grid;
   grid-template-columns: 26px minmax(0, 1fr);
-  gap: 12px;
+  gap: 10px;
   align-items: start;
-  margin-top: 24px;
-  padding: 16px;
+  margin-top: 16px;
+  padding: 12px;
   color: #143323;
   background: #e9f8ef;
   border: 1px solid #b8dfc5;
   border-radius: 8px;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 900;
   cursor: pointer;
 }
 
 .confirm-line input {
-  width: 22px;
-  height: 22px;
-  margin-top: 4px;
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
   accent-color: var(--green);
 }
 
 .device-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
 }
 
 .device-card {
-  min-height: 96px;
-  padding: 16px;
+  min-height: 82px;
+  padding: 14px;
   color: var(--ink);
   background: #fbfdfc;
   border: 1px solid var(--line);
@@ -286,7 +290,7 @@ a:hover {
 }
 
 .device-card strong {
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .device-card span {
@@ -308,7 +312,7 @@ a:hover {
 .plain-tip,
 .big-note {
   margin-top: 18px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   border-radius: 8px;
 }
 
@@ -328,26 +332,26 @@ a:hover {
   color: #123925;
   background: #e7f6ed;
   border: 1px solid #afd9bd;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
 }
 
 .help-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
+  gap: 12px;
 }
 
 .help-grid article {
-  padding: 18px;
+  padding: 14px;
   background: #fbfdfc;
   border: 1px solid var(--line);
   border-radius: 8px;
 }
 
 .help-grid h2 {
-  margin: 0 0 8px;
-  font-size: 19px;
+  margin: 0 0 6px;
+  font-size: 18px;
 }
 
 .help-grid p {
@@ -366,11 +370,11 @@ a:hover {
 @media (max-width: 900px) {
   .screen {
     grid-template-columns: 1fr;
-    align-content: center;
+    align-content: start;
   }
 
   .screen-copy h1 {
-    font-size: clamp(38px, 10vw, 58px);
+    font-size: clamp(34px, 8vw, 52px);
   }
 
   .progress-summary {
@@ -381,18 +385,75 @@ a:hover {
 
 @media (max-width: 640px) {
   .wizard-shell {
-    width: min(100% - 20px, 1180px);
-    padding: 10px 0;
+    width: min(100% - 16px, 1180px);
+    gap: 8px;
+    padding: 8px 0;
   }
 
-  .wizard-header,
-  .wizard-footer {
+  .wizard-header {
     align-items: stretch;
     flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .wizard-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 10px;
   }
 
   .screen {
-    padding: 22px;
+    padding: 16px;
+  }
+
+  .screen-copy h1 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+  }
+
+  .brand strong {
+    font-size: 17px;
+  }
+
+  .progress-summary {
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .action-box,
+  .device-grid,
+  .help-grid {
+    padding: 14px;
+  }
+
+  .device-card {
+    min-height: 72px;
+    padding: 12px;
+  }
+
+  .warning,
+  .plain-tip,
+  .big-note {
+    margin-top: 12px;
+  }
+
+  .big-note {
+    font-size: 17px;
   }
 
   .help-grid {
@@ -404,7 +465,22 @@ a:hover {
   }
 
   .wizard-footer .button.subtle {
+    grid-column: 1 / -1;
     margin-right: 0;
-    order: 3;
+  }
+
+  #back-button {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #next-button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  #restart-button {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 }
