@@ -316,6 +316,30 @@ a:hover {
   border-radius: 8px;
 }
 
+.guide-shot {
+  margin: 14px 0 0;
+  padding: 10px;
+  background: #f7faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.guide-shot img {
+  display: block;
+  width: 100%;
+  max-height: 170px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.guide-shot figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
 .warning {
   color: #4a3308;
   background: #fff3d0;
@@ -448,8 +472,13 @@ a:hover {
 
   .warning,
   .plain-tip,
-  .big-note {
+  .big-note,
+  .guide-shot {
     margin-top: 12px;
+  }
+
+  .guide-shot img {
+    max-height: 120px;
   }
 
   .big-note {

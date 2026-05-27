@@ -3,25 +3,26 @@ const basePages = [
   "device",
 ];
 
-const mobilePages = [
+const iosPages = [
   "register",
   "login",
   "buy",
   "download-iphone",
-  "download-android",
   "mobile-subscribe",
   "connect",
   "done",
 ];
 
 const desktopPagesByDevice = {
+  android: ["download-android", "desktop-login", "buy", "connect", "done"],
   windows: ["download-windows", "desktop-login", "buy", "connect", "done"],
   mac: ["download-mac", "desktop-login", "buy", "connect", "done"],
 };
 
 const pageOrder = [
   ...basePages,
-  ...mobilePages,
+  ...iosPages,
+  "download-android",
   "download-windows",
   "download-mac",
   "desktop-login",
@@ -43,7 +44,7 @@ function visiblePages() {
     return [...basePages, ...desktopPagesByDevice[selectedDevice]];
   }
 
-  return [...basePages, ...mobilePages].filter((pageId) => {
+  return [...basePages, ...iosPages].filter((pageId) => {
     const screen = document.querySelector(`[data-page="${pageId}"]`);
     const devices = screen.dataset.devices;
     return !devices || devices.split(" ").includes(selectedDevice);
