@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CloudUpUp 老师自助购买与安装翻页引导</title>
+    <meta
+      name="description"
+      content="给老师使用的 CloudUpUp 注册、登录、购买、安装和导入订阅翻页式防错引导。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="wizard-shell" aria-live="polite">
+      <header class="wizard-header">
+        <a class="brand" href="#start" aria-label="回到开始">
+          <span class="brand-mark" aria-hidden="true">CU</span>
+          <span>
+            <strong>CloudUpUp 老师引导</strong>
+            <small>一页一步，完成再翻页</small>
+          </span>
+        </a>
+        <div class="progress-summary">
+          <span id="step-counter">第 1 页</span>
+          <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+      </header>
+
+      <section class="screen active" data-page="start" data-title="开始">
+        <div class="screen-copy">
+          <p class="eyebrow">防错翻页模式</p>
+          <h1>每一页只做一件事。</h1>
+          <p class="lead">
+            这里会带老师完成注册、登录、购买、下载安装和连接。不要跳着看，
+            每完成一页再点下一页。
+          </p>
+        </div>
+        <div class="action-box">
+          <h2>开始前确认</h2>
+          <ul>
+            <li>准备一个常用邮箱。</li>
+            <li>准备一个自己能记住的密码。</li>
+            <li>手机或电脑保持能上网。</li>
+            <li>不要把密码和订阅链接发到群里。</li>
+          </ul>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经准备好了。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="device" data-title="选择设备" data-requires-device>
+        <div class="screen-copy">
+          <p class="eyebrow">第 1 步</p>
+          <h1>老师现在用的是什么设备？</h1>
+          <p class="lead">选错也没关系，可以点上一步回来重选。</p>
+        </div>
+        <div class="device-grid" role="radiogroup" aria-label="设备选择">
+          <button class="device-card" type="button" data-device="iphone">
+            <strong>iPhone / iPad</strong>
+            <span>需要安装 Shadowrocket，再导入订阅。</span>
+          </button>
+          <button class="device-card" type="button" data-device="android">
+            <strong>安卓手机</strong>
+            <span>需要安装 Android App，再导入订阅。</span>
+          </button>
+          <button class="device-card" type="button" data-device="windows">
+            <strong>Windows 电脑</strong>
+            <span>下载一键客户端，直接登录账号。</span>
+          </button>
+          <button class="device-card" type="button" data-device="mac">
+            <strong>Mac 电脑</strong>
+            <span>下载一键客户端，直接登录账号。</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" data-page="register" data-title="注册账号">
+        <div class="screen-copy">
+          <p class="eyebrow">第 2 步</p>
+          <h1>注册 CloudUpUp 账号。</h1>
+          <p class="lead">打开注册页，填写昵称、邮箱、密码，勾选服务条款，然后点注册。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://up02.cloudupup19.com/auth/register" target="_blank" rel="noreferrer">
+            打开注册页
+          </a>
+          <div class="warning">
+            注册完成后回到这个引导页，不要关闭本页面。
+          </div>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经注册成功。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="login" data-title="登录用户中心">
+        <div class="screen-copy">
+          <p class="eyebrow">第 3 步</p>
+          <h1>登录用户中心。</h1>
+          <p class="lead">用刚才注册的邮箱和密码登录。登录后留在用户中心页面。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://up02.cloudupup19.com/user" target="_blank" rel="noreferrer">
+            打开用户中心
+          </a>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经登录成功。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="buy" data-title="购买套餐">
+        <div class="screen-copy">
+          <p class="eyebrow">第 4 步</p>
+          <h1>购买套餐。</h1>
+          <p class="lead">进入商店或购买页面，选择套餐并完成付款。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://up02.cloudupup19.com/user/shop" target="_blank" rel="noreferrer">
+            去购买套餐
+          </a>
+          <div class="warning">
+            付款完成后，如果页面没有变化，先刷新用户中心或重新登录一次。
+          </div>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经购买成功。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="download-iphone" data-title="安装 iPhone / iPad App" data-devices="iphone">
+        <div class="screen-copy">
+          <p class="eyebrow">第 5 步</p>
+          <h1>安装 Shadowrocket。</h1>
+          <p class="lead">iPhone / iPad 需要先安装 Shadowrocket，再从用户中心导入订阅。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://up02.cloudupup19.com/user/tutorial?os=iOS&client=Shadowrocket" target="_blank" rel="noreferrer">
+            打开 iOS 官方教程
+          </a>
+          <p class="plain-tip">也可以直接在 App Store 搜索 Shadowrocket。</p>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经安装好 Shadowrocket。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="download-android" data-title="安装安卓 App" data-devices="android">
+        <div class="screen-copy">
+          <p class="eyebrow">第 5 步</p>
+          <h1>下载并安装 Android App。</h1>
+          <p class="lead">如果手机提示“未知来源应用”，选择允许本次安装。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://upup-down.fastgo.live/test/CloudUpup-2.0.3-android-universal.apk" target="_blank" rel="noreferrer">
+            下载 Android App
+          </a>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经安装好 Android App。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="download-windows" data-title="安装 Windows 客户端" data-devices="windows">
+        <div class="screen-copy">
+          <p class="eyebrow">第 5 步</p>
+          <h1>下载 Windows 一键客户端。</h1>
+          <p class="lead">下载 zip 后先解压，再双击里面的 CloudUpUp 程序。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="./downloads/NewCloudUpup-windows-amd64.zip" download>
+            下载 Windows 客户端
+          </a>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经打开 Windows 客户端。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="download-mac" data-title="安装 Mac 客户端" data-devices="mac">
+        <div class="screen-copy">
+          <p class="eyebrow">第 5 步</p>
+          <h1>下载 Mac 一键客户端。</h1>
+          <p class="lead">打开 dmg 文件，把 CloudUpUp 拖到“应用程序”。</p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="./downloads/CloudUpup-2.0.3-macos-universal.dmg" download>
+            下载 Mac 客户端
+          </a>
+          <div class="warning">
+            第一次打开如提示来自网络下载，选择打开；如提示网络配置，输入电脑开机密码允许。
+          </div>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经打开 Mac 客户端。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="mobile-subscribe" data-title="手机导入订阅" data-devices="iphone android">
+        <div class="screen-copy">
+          <p class="eyebrow">第 6 步</p>
+          <h1>从用户中心导入订阅。</h1>
+          <p class="lead">
+            手机端才需要订阅。找到“订阅”“一键导入”或“复制订阅链接”，按页面提示导入到 App。
+          </p>
+        </div>
+        <div class="action-box">
+          <a class="button primary" href="https://up02.cloudupup19.com/user" target="_blank" rel="noreferrer">
+            打开用户中心
+          </a>
+          <div class="warning">
+            订阅链接只给自己用，不要发到群里。
+          </div>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经导入订阅。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="desktop-login" data-title="电脑客户端登录" data-devices="windows mac">
+        <div class="screen-copy">
+          <p class="eyebrow">第 6 步</p>
+          <h1>在客户端里登录账号。</h1>
+          <p class="lead">电脑端不需要订阅链接。直接输入购买时使用的邮箱和密码。</p>
+        </div>
+        <div class="action-box">
+          <div class="big-note">
+            Windows / Mac：只登录账号，不要去找订阅链接。
+          </div>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经在客户端登录成功。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="connect" data-title="连接测试">
+        <div class="screen-copy">
+          <p class="eyebrow">最后一步</p>
+          <h1>打开开关，测试连接。</h1>
+          <p class="lead">选择一条线路，打开连接开关。连不上就换一条线路再试。</p>
+        </div>
+        <div class="action-box">
+          <ol class="test-list">
+            <li>先选择一条香港、日本或自动线路。</li>
+            <li>打开连接开关。</li>
+            <li>打开需要使用的网站测试。</li>
+            <li>不成功就换线路，不要反复卸载 App。</li>
+          </ol>
+          <label class="confirm-line">
+            <input type="checkbox" data-required />
+            <span>我已经连接成功。</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="screen" data-page="done" data-title="完成">
+        <div class="screen-copy">
+          <p class="eyebrow">完成</p>
+          <h1>可以正常使用了。</h1>
+          <p class="lead">以后换设备时，重新打开本页面，选择新设备再跟着做一遍。</p>
+        </div>
+        <div class="help-grid">
+          <article>
+            <h2>付款后还是不能用</h2>
+            <p>退出客户端或 App，重新登录一次；仍不行就换线路。</p>
+          </article>
+          <article>
+            <h2>手机找不到订阅</h2>
+            <p>回用户中心找“订阅”“一键导入”“复制订阅链接”。</p>
+          </article>
+          <article>
+            <h2>电脑找不到订阅</h2>
+            <p>电脑端不用订阅，只需要客户端登录账号。</p>
+          </article>
+          <article>
+            <h2>需要人工帮助</h2>
+            <p>打开用户中心右下角客服，把设备型号和截图发给客服。</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="wizard-footer">
+        <button class="button secondary" type="button" id="back-button">上一步</button>
+        <button class="button subtle" type="button" id="restart-button">重新开始</button>
+        <button class="button primary" type="button" id="next-button">下一页</button>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
